@@ -1,9 +1,9 @@
 {
-    "name": "ddmaster/postgre-search-bundle",
+    "name": "ddmaster/postgres-search-bundle",
     "type": "symfony-bundle",
     "description": "Tools to use full-text search PostgreSQL in Doctrine.",
     "keywords": ["doctrine2", "symfony2", "search", "postgresql"],
-    "homepage": "https://github.com/ddmaster/PostgreSearchBundle",
+    "homepage": "https://github.com/pbald/postgres-search-bundle",
     "license": "MIT",
     "authors": [
         {
@@ -17,7 +17,11 @@
         "doctrine/orm": ">=2.2.3"
     },
     "autoload": {
-        "psr-0": { "Ddmaster\\PostgreSearchBundle": "" }
+        "psr-4": { "PBald\\PostgreSearchBundle": "lib/" }
     },
-    "target-dir": "Ddmaster/PostgreSearchBundle"
+    "autoload-dev": {
+        "psr-4": {
+            "PBald\\SPgSp\\PostgreSearchBundle\\": "tests/"
+        }
+    }
 }
