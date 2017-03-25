@@ -16,11 +16,11 @@
         "doctrine/orm": ">=2.2.3"
     },
     "autoload": {
-        "psr-4": { "PBald\\PostgreSearchBundle": "lib/" }
+        "psr-4": { "PBald\\PostgreSearchBundle\\": "lib/" }
     },
     "autoload-dev": {
         "psr-4": {
-            "PBald\\SPgSp\\PostgreSearchBundle\\": "tests/"
+            "PBald\\SPgSp\\PostgreSearchBundle\\Test\\": "tests/"
         }
     }
 }
