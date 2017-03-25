@@ -1,10 +1,10 @@
 <?php
-namespace Ddmaster\PostgreSearchBundle\Dbal;
+namespace PBald\PostgreSearchBundle\Dbal;
  
 use Doctrine\DBAL\Types\Type;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
  
-class TsvectorType extends Type
+class TsVectorType extends Type
 {
     public function getName()
     {

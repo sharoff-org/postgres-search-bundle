@@ -1,6 +1,6 @@
 <?php
 
-namespace Ddmaster\PostgreSearchBundle;
+namespace PBald\PostgreSearchBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

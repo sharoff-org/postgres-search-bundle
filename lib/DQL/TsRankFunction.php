@@ -1,5 +1,5 @@
 <?php
-namespace Ddmaster\PostgreSearchBundle\DQL;
+namespace PBald\PostgreSearchBundle\DQL;
 
 use Doctrine\ORM\Query\AST\Functions\FunctionNode;
 use Doctrine\ORM\Query\Lexer;
@@ -7,7 +7,7 @@ use Doctrine\ORM\Query\Lexer;
 /**
  * TsrankFunction ::= "TSRANK" "(" StringPrimary "," StringPrimary ")"
  */
-class TsrankFunction extends FunctionNode
+class TsRankFunction extends FunctionNode
 {
     public $fieldName = null;
     public $queryString = null;

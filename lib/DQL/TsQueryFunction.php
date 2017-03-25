@@ -1,5 +1,5 @@
 <?php
-namespace Ddmaster\PostgreSearchBundle\DQL;
+namespace PBald\PostgreSearchBundle\DQL;
 
 use Doctrine\ORM\Query\AST\Functions\FunctionNode;
 use Doctrine\ORM\Query\Lexer;
@@ -7,7 +7,7 @@ use Doctrine\ORM\Query\Lexer;
 /**
  * TsqueryFunction ::= "TSQUERY" "(" StringPrimary "," StringPrimary "[, " StringPrimary "])"
  */
-class TsqueryFunction extends FunctionNode
+class TsQueryFunction extends FunctionNode
 {
     public $fieldName = null;
     public $queryString = null;
