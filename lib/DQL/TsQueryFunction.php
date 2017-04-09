@@ -33,10 +33,10 @@ class TsQueryFunction extends FunctionNode
     public function getSql(\Doctrine\ORM\Query\SqlWalker $sqlWalker)
     {
         if ($this->configuration) {
-            $stmnt = $this->fieldName->dispatch($sqlWalker) .  " @@ to_tsquery(" . $this->configuration->dispatch($sqlWalker) . ", " . $this->queryString->dispatch($sqlWalker) . ")";
+            $stmnt = "(to_tsvector(" . $this->configuration->dispatch($sqlWalker) . ", " . $this->fieldName->dispatch($sqlWalker) . ") @@ to_tsquery(" . $this->configuration->dispatch($sqlWalker) . ", " . $this->queryString->dispatch($sqlWalker) . "))";
         }
         else {
-            $stmnt = $this->fieldName->dispatch($sqlWalker) .  " @@ to_tsquery(" . $this->queryString->dispatch($sqlWalker) . ")";
+            $stmnt = "(" . $this->fieldName->dispatch($sqlWalker) .  " @@ to_tsquery(" . $this->queryString->dispatch($sqlWalker) . "))";
         }
         
         return $stmnt;
