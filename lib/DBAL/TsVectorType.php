@@ -28,7 +28,7 @@ class TsVectorType extends Type
  
     public function convertToDatabaseValueSQL($sqlExpr, AbstractPlatform $platform)
     {
-        return sprintf("to_tsvector('italian',%s)", $sqlExpr);
+        return sprintf("to_tsvector('russian',%s)", $sqlExpr);
     }
  
     public function convertToDatabaseValue($value, AbstractPlatform $platform)
